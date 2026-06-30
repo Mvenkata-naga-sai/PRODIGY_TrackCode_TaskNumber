@@ -24,3 +24,13 @@ A simple social media web app built with Node.js, Express, and SQLite.
 ## Notes
 - The app uses `uploads/` for media files and `data/social.db` for the SQLite database.
 - Use the `x-user-id` header for authenticated requests in API clients.
+
+## 👨‍💻 Author:
+
+m venkata naga sai
+
+Computer Science Engineering 
+
+## ⭐ Conclusion:
+
+This project showcases a complete social media ecosystem with modern features like content sharing, user interaction, and scalability. It can be extended into a production-level application with additional enhancements.
