@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480">
+  <rect width="100%" height="100%" fill="#E8EAF6" />
+  <rect x="220" y="150" width="200" height="220" rx="30" fill="#D1C4E9" />
+  <circle cx="320" cy="220" r="30" fill="#B39DDB" />
+  <text x="50%" y="395" font-family="Segoe UI, sans-serif" font-size="34" fill="#4527A0" text-anchor="middle">Lavender Soap</text>
+</svg>

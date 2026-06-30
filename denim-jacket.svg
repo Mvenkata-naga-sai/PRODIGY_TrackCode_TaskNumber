@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480">
+  <rect width="100%" height="100%" fill="#E3F2FD" />
+  <path d="M220 120 L260 120 L260 260 L220 260 Z M380 120 L420 120 L420 260 L380 260 Z" fill="#1E88E5" />
+  <path d="M260 120 L320 80 L380 120" fill="#42A5F5" />
+  <path d="M260 260 Q320 320 380 260" fill="#42A5F5" />
+  <text x="50%" y="420" font-family="Segoe UI, sans-serif" font-size="34" fill="#0D47A1" text-anchor="middle">Denim Jacket</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480">
+  <rect width="100%" height="100%" fill="#ECEFF1" />
+  <rect x="200" y="170" width="240" height="140" rx="20" fill="#455A64" />
+  <circle cx="280" cy="240" r="30" fill="#B0BEC5" />
+  <circle cx="360" cy="240" r="30" fill="#B0BEC5" />
+  <text x="50%" y="420" font-family="Segoe UI, sans-serif" font-size="34" fill="#37474F" text-anchor="middle">Bluetooth Speaker</text>
+</svg>
