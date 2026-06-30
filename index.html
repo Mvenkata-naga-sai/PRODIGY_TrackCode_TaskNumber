@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Chat</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fb; color: #1f2937; }
+    .container { display: flex; min-height: 100vh; }
+    .sidebar { width: 280px; background: #ffffff; border-right: 1px solid #e5e7eb; padding: 24px; box-sizing: border-box; }
+    .content { flex: 1; display: flex; flex-direction: column; }
+    .section { margin-bottom: 20px; }
+    .hidden { display: none; }
+    .room-list, .user-list { list-style: none; padding: 0; margin: 0; }
+    .room-list li, .user-list li { padding: 10px 12px; border-radius: 8px; cursor: pointer; margin-bottom: 8px; background: #f3f4f6; }
+    .room-list li.active, .user-list li.active { background: #dbeafe; }
+    .chat-window { flex: 1; display: flex; flex-direction: column; padding: 24px; gap: 16px; }
+    .messages { flex: 1; overflow-y: auto; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
+    .message { margin-bottom: 14px; }
+    .message strong { display: block; margin-bottom: 4px; }
+    .footer { display: flex; gap: 12px; }
+    .footer input { flex: 1; padding: 12px; border: 1px solid #d1d5db; border-radius: 10px; }
+    .footer button { padding: 12px 18px; border: none; border-radius: 10px; background: #2563eb; color: white; cursor: pointer; }
+    .panel { padding: 24px; max-width: 340px; width: 100%; }
+    .panel input { width: 100%; padding: 10px 12px; margin-bottom: 12px; border: 1px solid #d1d5db; border-radius: 10px; }
+    .panel button { width: 100%; padding: 12px; border: none; border-radius: 10px; background: #2563eb; color: white; cursor: pointer; }
+    .meta { font-size: 14px; color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div id="authPanel" class="panel">
+        <h2>Sign In</h2>
+        <input id="usernameInput" type="text" placeholder="Username" />
+        <input id="passwordInput" type="password" placeholder="Password" />
+        <button id="loginBtn">Log In</button>
+        <button id="registerBtn" style="margin-top: 8px; background: #10b981;">Register</button>
+        <p id="authError" style="color:#dc2626; margin-top:10px;"></p>
+      </div>
+      <div id="chatPanel" class="panel hidden">
+        <h2>Rooms</h2>
+        <ul id="rooms" class="room-list"></ul>
+        <input id="newRoomInput" type="text" placeholder="New room name" />
+        <button id="createRoomBtn">Create Room</button>
+        <h2 style="margin-top: 20px;">Online</h2>
+        <ul id="users" class="user-list"></ul>
+      </div>
+    </div>
+    <div class="content">
+      <div id="welcome" class="chat-window" style="justify-content: center; align-items: center;">
+        <div>
+          <h1>Real-Time Chat</h1>
+          <p class="meta">Register or log in to join chat rooms, send messages, and start private conversations.</p>
+        </div>
+      </div>
+      <div id="chatWindow" class="chat-window hidden">
+        <div>
+          <h2 id="roomTitle">General</h2>
+          <p id="statusText" class="meta">Connected as <span id="currentUser"></span></p>
+        </div>
+        <div id="messages" class="messages"></div>
+        <div class="footer">
+          <input id="messageInput" type="text" placeholder="Type a message..." />
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
